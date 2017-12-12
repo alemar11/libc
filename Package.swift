@@ -3,6 +3,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "libc",
-    swiftLanguageVersions: [4]
+  name: "libc",
+  products: [.library(name: "libc", targets: ["libc"])],
+  targets: [.target(name: "libc")],
+  swiftLanguageVersions: [4]
 )
